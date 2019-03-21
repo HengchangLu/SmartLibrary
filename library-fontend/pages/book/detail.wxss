@@ -1,0 +1,125 @@
+.bookName text{
+  font-size: 20px;
+  margin-top: 100px;
+  margin-left: 20px;
+}
+.list{
+  margin-top: 20rpx;
+}
+.book{
+  display: flex;
+  flex-direction: row;
+}
+
+.pic image {
+  width: 200rpx;
+  height: 250rpx;
+  padding: 10px;
+}
+.basic-info {
+  font-size: 32rpx;
+  padding-top: 20rpx;
+  line-height: 40rpx;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.title{
+  color: gray;
+  display: block;
+}
+.title text{
+  white-space: nowrap;
+}
+.desc text{
+  color: #333;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  font-size: 32rpx;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  /* -webkit-line-clamp:2; */
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  margin-top: 60rpx;
+}
+.canvas-title{
+  font-size: 35rpx;
+  margin-left: 20rpx;
+  color: #3377aa;
+}
+.canvas-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+.pos-neg-pr{
+  font-size: 25rpx;
+}
+.label{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.labelTitle{
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  margin-left: 20rpx;
+  font-size: 35rpx;
+  color: #3377aa;
+}
+.labelContent{
+  background-color: #ffffff;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  float: left;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  border: 1px solid #1E90FF;
+  color: #1E90FF;
+}
+.summaryTitle{
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  margin-left: 20rpx;
+  font-size: 35rpx;
+  color: #3377aa;
+}
+.summaryContent text{
+  font-size: 25rpx;
+}
+.long-dec{
+  padding-left: 20rpx;
+  display: -webkit-box;
+  font-size: 30rpx;
+  line-height:40rpx;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px 25px;
+}
+.hide{
+  display: -webkit-box;
+}
+.show{
+  display: block;
+}
+.arrow{
+  position: absolute;
+  width: 40rpx;
+  height:43rpx;
+  left:50%;
+  transform: translate(-50%)
+}

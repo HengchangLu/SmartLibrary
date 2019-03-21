@@ -1,0 +1,78 @@
+<view class="content">
+  <view class="hr"></view>
+  <view>
+    <!-- <navigator wx:for="{{service}}" wx:key="k" url="../service/detail?url={{item.url}}">
+      <view class="item">
+        <view class="img">
+          <image src="{{item.icon}}" style="width:40rpx;height:48rpx;"></image>
+        </view>
+        <view class="title">{{item.title}}</view>
+        <view class="detail">
+          <image src="../images/right.jpg" style="width:36rpx;height:36rpx;"></image>
+        </view>
+      </view>
+    </navigator> -->
+    <view wx:for="{{service}}" wx:key="k" wx:for-item="parentItem" wx:for-index="parentIndex">
+      <!-- 只有一级菜单 -->
+      <navigator class="item" wx:if="{{!parentItem.show}}" url="../service/detail?title={{parentItem.title}}">
+        <view class="img">
+          <image src="../images/service.jpg" style="width:40rpx;height:48rpx;"></image>
+        </view>
+        <view class="title">{{parentItem.title}}</view>
+        <view class="detail">
+          <image src="../images/right.jpg" style="width:36rpx;height:36rpx;"></image>
+        </view>
+      </navigator>
+      <!-- 有二级菜单 -->
+      <view class="aaa" wx:if="{{parentItem.show}}" catchtap='listTap' data-parentindex='{{parentIndex}}'>
+        <view class="item">
+          <view class="img">
+            <image src="../images/service.jpg" style="width:40rpx;height:48rpx;"></image>
+          </view>
+          <view class="title">{{parentItem.title}}</view>
+          <view class="detail">
+            <image src="../images/down.jpg" style="width:36rpx;height:36rpx;" class='iconDown {{parentItem.show1&&"iconDownRotate"}}'></image>
+          </view>
+        </view>
+        <!-- 展开内容 -->
+        <!-- <view class="item"> -->
+        <view class="listItemBox" wx:if="{{parentItem.show1}}">
+          <view class="listItem" wx:for="{{parentItem.secondTitle}}" wx:key="k" catchtap="listItemTap" data-index="{{index}}" data-parentindex="{{parentIndex}}">
+            <navigator class='item1' url="../service/detail?title={{item}}">
+              <text class='listItemName'>{{item}}</text>
+              <view class="detail">
+                <image src="../images/right.jpg" style="width:36rpx;height:36rpx;"></image>
+              </view>
+            </navigator>
+          </view>
+        </view>
+        <!-- </view> -->
+      </view>
+    </view>
+
+    <!-- <view class="borrowListBox" wx:for="{{borrowList}}" wx:key="k" wx:for-item='parentItem' wx:for-index='parentIndex'>
+      <view class="list">
+        <view class="item" catchtap="listTap" data-parentindex="{{parentIndex}}">
+          <view class="img">
+            <image src="../images/service.jpg" style="width:40rpx;height:48rpx;"></image>
+          </view>
+          <view class="title">借阅服务</view>
+          <view class="detail">
+            <image src="../images/down.jpg" class="iconDown{{parentItem.show&&iconDownRotate}}" style="width:36rpx;height:36rpx;"></image>
+          </view>
+        </view>
+        <view class="listItemBox" wx:if="{{parentItem.show}}">
+          <view class="listItem" wx:for="{{parentItem.item}}" wx:key="k" catchtap='listItemTap' data-index='{{index}}' data-parentindex='{{parentIndex}}'>
+            <view class="item">
+              <view class="title">{{item.title}}</view>
+              <view class="detail">
+                <image src="../images/down.jpg" style="width:36rpx;height:36rpx;"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view> -->
+
+  </view>
+</view>

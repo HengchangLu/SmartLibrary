@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/news/index",
+    "pages/news/detail",
+    "pages/libsummary/libsummary",
+    "pages/friendlylink/index",
+    "pages/friendlylink/link",
+    "pages/service/index",
+    "pages/service/detail",
+    "pages/user/index",
+    "pages/user/login",
+    "pages/user/myBorrow",
+    "pages/user/feedback",
+    "pages/reservation/index",
+    "pages/reservation/seat",
+    "pages/reservation/space",
+    "pages/book/newBook",
+    "pages/book/detail",
+    "pages/book/search",
+    "pages/book/recommendBook",
+    "pages/location/index",
+    "pages/guessYouLike/index",
+    "pages/rank/index",
+    "pages/classification/index",
+    "pages/tempIndex/index",
+    "pages/tempIndex/view",
+    "pages/tempIndex/pic",
+    "pages/map/index"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#00C953",
+    "navigationBarTitleText": "山东大学智慧图书馆",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor":"#00C953",
+    "list": [
+      {
+        "pagePath": "pages/tempIndex/index",
+        "text": "首页",
+        "iconPath": "pages/images/home.png",
+        "selectedIconPath": "pages/images/home_1.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath": "pages/images/home.png",
+        "selectedIconPath": "pages/images/home_1.png"
+      },
+      {
+        "pagePath": "pages/news/index",
+        "text": "资讯",
+        "iconPath": "pages/images/news.png",
+        "selectedIconPath": "pages/images/news_1.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "pages/images/my.png",
+        "selectedIconPath": "pages/images/my_1.png"
+      }
+    ]
+  },
+  "debug": true
+}

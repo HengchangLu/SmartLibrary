@@ -1,0 +1,10 @@
+<!-- 测试使用 -->
+<view class="selectLibrary">
+  <button type="default" bindtap="selectLibrary" data-id="0" data-libraryname="蒋震图书馆">蒋震图书馆</button>
+  <button type="default" bindtap="selectLibrary" data-id="1" data-libraryname="工学图书馆">工学图书馆</button>
+  <button type="default" bindtap="selectLibrary" data-id="2" data-libraryname="青岛图书馆">青岛图书馆</button>
+  <button type="default" bindtap="selectLibrary" data-id="3" data-libraryname="中心文理分馆">中心文理分馆</button>
+  <button type="default" bindtap="selectLibrary" data-id="4" data-libraryname="洪家楼图书馆">洪家楼图书馆</button>
+  <button type="default" bindtap="selectLibrary" data-id="5" data-libraryname="兴隆山图书馆">兴隆山图书馆</button>
+  <button type="default" bindtap="selectLibrary" data-id="6" data-libraryname="趵突泉图书馆">趵突泉图书馆</button>
+</view>

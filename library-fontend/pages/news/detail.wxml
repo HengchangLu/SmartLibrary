@@ -1,0 +1,17 @@
+<import src="../wxParse/wxParse.wxml" />
+<view class="bg"></view>
+<view class="title">
+  <text>{{title}}</text>
+</view>
+<view class="time">
+  <text>{{time}}</text>
+</view>
+<view style="margin:28rpx 50rpx;">
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+<view class="bottomTitle">
+    <text>新闻链接（长按可复制）\n</text>
+  </view>
+<view class="bottomUrl">
+  <text selectable='true'>{{url}}</text>
+</view>

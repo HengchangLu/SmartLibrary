@@ -1,0 +1,31 @@
+<import src="../wxParse/wxParse.wxml" />
+<view class="bg"></view>
+<view class="content">
+  <view class="left">
+    <view class="{{flag==0?'select':'normal'}}" id="0" data-text="馆情介绍" bindtap="switchNav">馆情介绍</view>
+    <view class="{{flag==1?'select':'normal'}}" id="1" data-text="历史沿革" bindtap="switchNav">历史沿革</view>
+    <view class="{{flag==2?'select':'normal'}}" id="2" data-text="机构设置" bindtap="switchNav">机构设置</view>
+    <view class="{{flag==3?'select':'normal'}}" id="3" data-text="分馆特色" bindtap="switchNav">分馆特色</view>
+    <view class="{{flag==4?'select':'normal'}}" id="4" data-text="古籍收藏概况" bindtap="switchNav">古籍收藏概况</view>
+    <view class="{{flag==5?'select':'normal'}}" id="5" data-text="古籍阅览室" bindtap="switchNav">古籍阅览室</view>
+    <view class="{{flag==6?'select':'normal'}}" id="6" data-text="古籍阅览管理规定" bindtap="switchNav">古籍阅览管理规定</view>
+    <view class="{{flag==7?'select':'normal'}}" id="7" data-text="山东大学古籍保护计划" bindtap="switchNav">山东大学古籍保护计划</view>
+  </view>
+  <view class="right" style="font-size=30rpx;">
+    <view class="title">
+      <text>{{title}}</text>
+    </view>
+    <view class="time">
+      <text>{{time}}</text>
+    </view>
+    <view style="margin:28rpx 18rpx;">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+    <view class="bottomTitle">
+      <text>新闻链接（长按可复制）\n</text>
+    </view>
+    <view class="bottomUrl">
+      <text selectable='true'>{{url}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<view class="userinfo">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+<view class="input-area">
+  <view class="loginInput ">
+    <image src="/pages/images/fdj.jpg" style="width:36rpx;height:32rpx;"></image>
+    <input bindinput="accountInput" type='number' class="account" placeholder="校园卡账号" name="account"></input>
+  </view>
+  <view class="loginInput">
+    <image src="/pages/images/fdj.jpg" style="width:36rpx;height:32rpx;"></image>
+    <input bindinput="passwordInput" type='number' class="password" password="true" placeholder="校园卡查询密码" name="password" value="{{password}}"></input>
+  </view>
+</view>
+<view class="btn-area">
+  <button class="loginBtn" type="primary" style="color:#777;background-color: #ffffff;" disabled="{{disabled}}" loading="{{loginLoading}}" form-type="submit" open-type="getUserInfo" bindgetuserinfo="login">
+    <text>登录</text>
+  </button>
+</view>

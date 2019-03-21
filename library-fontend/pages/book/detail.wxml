@@ -1,0 +1,144 @@
+<view class="bookName">
+  <text>{{title}}</text>
+</view>
+<view class="list">
+  <view class="book">
+    <view class="pic">
+      <image src="{{content.book_img}}" mode="scaleToFill"></image>
+    </view>
+    <view class="basic-info">
+      <view class="row" wx:if="{{content.subtitle}}">
+        <view class="title"><text>副标题：</text></view>
+        <view class="desc">
+          <text>{{content.subtitle}}</text>
+        </view>
+      </view>
+      <view class="row" wx:if="{{content.author}}">
+        <view class="title"><text>作者：</text></view>
+        <view class="desc">
+          <text>{{content.author}}</text>
+        </view>
+      </view>
+      <view class="row" wx:if="{{content.publisher}}">
+        <view class="title"><text>出版社：</text></view>
+        <view class="desc">
+          <text>{{content.publisher}}</text>
+        </view>
+      </view>
+      <view class="row" wx:if="{{content.zt_num}}">
+        <view class="title"><text>中图分类号：</text></view>
+        <view class="desc">
+          <text>{{content.zt_num}}</text>
+        </view>
+      </view>
+      <view class="row" wx:if="{{content.book_price}}">
+        <view class="title"><text>定价：</text></view>
+        <view class="desc">
+          <text>{{content.book_price}}</text>
+        </view>
+      </view>
+      <view class="row" wx:if="{{content.pub_date}}">
+        <view class="title"><text>出版年：</text></view>
+        <view class="desc">
+          <text>{{content.pub_date}}</text>
+        </view>
+      </view>
+      <view class="row" wx:if="{{content.pages}}">
+        <view class="title"><text>页数：</text></view>
+        <view class="desc">
+          <text>{{content.pages}}</text>
+        </view>
+      </view>
+      <view class="row" wx:if="{{content.isbn}}">
+        <view class="title"><text>ISBN：</text></view>
+        <view class="desc">
+          <text>{{content.isbn}}</text>
+        </view>
+      </view>
+      <view class="row" wx:if="{{content.db_score}}">
+        <view class="title"><text>豆瓣评分：</text></view>
+        <view class="desc">
+          <image wx:if="{{content.db_score>=0.5 && content.db_score< 1.5}}" src="/pages/images/star_half.png" style="width:12px;height:12px;"></image>
+          <image wx:if="{{content.db_score >= 1.5}}" src="/pages/images/star.png" style="width:12px;height:12px;"></image>
+          <image wx:if="{{content.db_score>=2.5 && content.db_score< 3.5}}" src="/pages/images/star_half.png" style="width:12px;height:12px;"></image>
+          <image wx:if="{{content.db_score >= 3.5 }}" src="/pages/images/star.png" style="width:12px;height:12px;"></image>
+          <image wx:if="{{content.db_score>=4.5 && content.db_score< 5.5}}" src="/pages/images/star_half.png" style="width:12px;height:12px;"></image>
+          <image wx:if="{{content.db_score >= 5.5 }}" src="/pages/images/star.png" style="width:12px;height:12px;"></image>
+          <image wx:if="{{content.db_score>=6.5 && content.db_score< 7.5}}" src="/pages/images/star_half.png" style="width:12px;height:12px;"></image>
+          <image wx:if="{{content.db_score >= 7.5 }}" src="/pages/images/star.png" style="width:12px;height:12px;"></image>
+          <image wx:if="{{content.db_score>= 8.5 && content.db_score< 9.5}}" src="/pages/images/star_half.png" style="width:12px;height:12px;"></image>
+          <image wx:if="{{content.db_score >= 9.5}}" src="/pages/images/star.png" style="width:12px;height:12px;"></image>
+          {{content.db_score}}</view>
+      </view>
+    </view>
+  </view>
+  <text class="canvas-title">基于深度学习的情感分析</text>
+  <view class="row">
+    <canvas canvas-id="mypie" style="width:300rpx;height:300rpx;"></canvas>
+    <view class="column">
+      <view class="canvas-row">
+        <canvas canvas-id="canvasRect1" style="width:40rpx;height:40rpx;margin-left:140rpx;margin-top:10rpx;"></canvas>
+        <text class="pos-neg-pr">力荐：{{content.emotion_1}}%</text>
+      </view>
+      <view class="canvas-row">
+        <canvas canvas-id="canvasRect2" style="width:40rpx;height:40rpx;margin-left:140rpx;margin-top:10rpx;"></canvas>
+        <text class="pos-neg-pr">推荐：{{content.emotion_2}}%</text>
+      </view>
+
+      <view class="canvas-row">
+        <canvas canvas-id="canvasRect3" style="width:40rpx;height:40rpx;margin-left:140rpx;margin-top:10rpx;"></canvas>
+        <text class="pos-neg-pr">还行：{{content.emotion_3}}%</text>
+      </view>
+
+      <view class="canvas-row">
+        <canvas canvas-id="canvasRect4" style="width:40rpx;height:40rpx;margin-left:140rpx;margin-top:10rpx;"></canvas>
+        <text class="pos-neg-pr">较差：{{content.emotion_4}}%</text>
+      </view>
+
+      <view class="canvas-row">
+        <canvas canvas-id="canvasRect5" style="width:40rpx;height:40rpx;margin-left:140rpx;margin-top:10rpx;"></canvas>
+        <text class="pos-neg-pr">很差：{{content.emotion_5}}%</text>
+      </view>
+    </view>
+  </view>
+  <view class="label" wx:if="{{content.label}}">
+    <view class="labelTitle">情感标签</view>
+    <view class="desc">
+      <view class="labels" wx:for="{{labels}}" wx:key="k">
+        <view class="labelContent">{{item}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="summary" wx:if="{{content.book_intro}}">
+    <view class="summaryTitle">
+      内容简介
+    </view>
+    <view class="long-dec {{isFoldContent?'hide':'show'}}">
+      <text wx:for="{{book_intro}}" wx:key="k">{{item}}\n</text>
+    </view>
+    <image class="arrow" src=" {{isFoldContent?'../images/arrow_down.png':'../images/arrow_up.png'}}" bindtap="showAllContent" data-id='1'></image>
+  </view>
+
+  <view class="summary" wx:if="{{content.author_intro}}">
+    <view class="summaryTitle">
+      作者简介
+    </view>
+    <view class="long-dec {{isFoldAuthor?'hide':'show'}}">
+      <text wx:for="{{author_intro}}" wx:key="k">{{item}}\n</text>
+    </view>
+    <image class="arrow" src=" {{isFoldAuthor?'../images/arrow_down.png':'../images/arrow_up.png'}}" bindtap="showAllAuthor"></image>
+  </view>
+
+  <view class="summary" wx:if="{{content.book_catalog}}">
+    <view class="summaryTitle">
+      目录
+    </view>
+    <view class="long-dec {{isFoldCatalog?'hide':'show'}}">
+      <text wx:for="{{book_catalog}}" wx:key="k">{{item}}\n</text>
+    </view>
+    <image class="arrow" src=" {{isFoldCatalog?'../images/arrow_down.png':'../images/arrow_up.png'}}" bindtap="showAllCatalog"></image>
+  </view>
+  <view class="pageBottom">
+  </view>
+</view>

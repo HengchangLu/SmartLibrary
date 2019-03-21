@@ -1,0 +1,38 @@
+<view class="container">
+  <!-- <image class="backgroundPic" src="https://t1.huanqiu.cn/208949e4f2d6f6baf558c51073e060ee.jpg" /> -->
+  <!-- <view class='bg' style="background-image: url(https://t1.huanqiu.cn/208949e4f2d6f6baf558c51073e060ee.jpg);"></view> -->
+  <!-- <view class="backView">
+    <image class="blackImage" src="/pages/images/test.png"></image>
+  </view> -->
+  <view class="head">
+    <view class="headcontent">
+      <picker mode="selector" name="day" value="{{day}}" range="{{days}}" bindchange='getdays' class='picker'>
+        <text>{{days[day]}}</text>
+      </picker>
+    </view>
+    
+    <view class="headcontent">
+      <picker mode="selector" name="city" value="{{city}}" range="{{citys}}" bindchange='getcity' class='picker'>
+        <text>{{citys[city]}}</text>
+      </picker>
+    </view>
+
+    <view class="headcontent">
+      <picker mode="selector" name="target" value="{{target}}" range="{{targets}}" bindchange='gettarget' class='picker'>
+        <text>{{targets[target]}}</text>
+      </picker>
+    </view>
+    <view class="headcontent">
+      <picker mode="selector" name="people" value="{{people}}" range="{{peoples}}" bindchange='getpeople' class='picker'>
+        <text>{{peoples[people]}}</text>
+      </picker>
+    </view>
+    <view class="headcontent">
+      <picker mode="selector" name="traffic" value="{{traffic}}" range="{{traffics}}" bindchange='gettraffic' class='picker'>
+        <text>{{traffics[traffic]}}</text>
+      </picker>
+    </view>
+    <button class="button" type="primary" bindtap='toView'><text>确定</text></button>
+
+  </view>
+</view>  

@@ -1,0 +1,116 @@
+page {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0rpx;
+  justify-content: flex-start;
+}
+
+.search {
+  width: 100%;
+  background-color: #00c953;
+  height: 50px;
+}
+
+.searchInput {
+  width: 82%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+}
+
+.searchInput image {
+  margin-left: 20rpx;
+}
+
+.searchContent {
+  font-size: 15px;
+  color: #777;
+  margin-left: 10rpx;
+}
+
+.btn {
+  position: absolute;
+  right: 10px;
+}
+
+.btn button {
+  width: 60px;
+  font-size: 15px;
+  background: none !important;
+  color: #fff !important;
+  border: none;
+  text-align: center;
+}
+
+button::after {
+  border: none;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.pic {
+  width: 30%;
+}
+
+.pic image {
+  width: 80px;
+  height: 100px;
+  padding: 10px;
+}
+
+.book-info {
+  width: 70%;
+  font-size: 12px;
+  padding-top: 10px;
+  line-height: 20px;
+}
+
+.name text {
+  display: block;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.desc {
+  color: #333;
+  font-size: 30rpx;
+}
+
+.desc text {
+  display: block;
+  color: #333;
+  font-size: 30rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hr {
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+  opacity: 0.2;
+}
+
+scroll-view {
+  display: block;
+  width: 100%;
+  height: calc(100% - 50px);
+}

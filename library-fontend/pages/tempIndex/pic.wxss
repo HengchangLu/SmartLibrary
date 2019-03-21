@@ -1,0 +1,12 @@
+.pic{
+  display: flex;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  align-content: center;
+
+}
+
+.bottomFont{
+  margin-left: 30rpx;
+  font-size: 30rpx;
+}

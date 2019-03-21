@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="search">
+    <view class="searchInput" bindtap="searchInput">
+      <image src="/pages/images/fdj.jpg" style="width:18px;height:16px;" ></image>
+      <text>搜索你感兴趣的书目</text>
+    </view>
+  </view>
+  <!-- 轮播图 -->
+  <swiper class="swiper" indicator-dots="false" indicator-color='rgba(0, 0, 0, 0)' indicator-active-color='rgba(0, 0, 0, 0)' autoplay="true" interval="3000" duaration="1000">
+    <swiper-item wx:for="{{imgUrls}}" wx:key="url">
+      <image src="{{item.url}}" bindload="imageLoad" style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;" />
+    </swiper-item>
+  </swiper>
+  <!--导航-->
+  <view class="nav" style="margin-top:30rpx; width: 100%">
+    <view class="item" bindtap="toRankIndex">
+      <view>
+        <image src="../images/rank.png" style="width:33px;height:30px;"></image>
+      </view>
+      <text>排行榜</text>
+    </view>
+    <view class="item" bindtap="toGuessIndex">
+      <view>
+        <image src="../images/book.png" style="width:28px;height:30px;"></image>
+      </view>
+      <text>猜你喜欢</text>
+    </view>
+    <view class="item" bindtap="toLocationIndex">
+      <view>
+        <image src="../images/location.png" style="width:25px;height:35px;"></image>
+      </view>
+      <text>图书定位</text>
+    </view>
+    <view class="item" bindtap="toAppointIndex">
+      <view>
+        <image src="../images/seat.png" style="width:33px;height:30px;"></image>
+      </view>
+      <text>预约</text>
+    </view>
+  </view>
+  <view class="newbooks">
+    <view class="header">
+      <button type="default" bindtap="toNewBookIndex">
+        <text>新书速递</text>
+      </button>
+    </view>
+    <view class="content">
+      <navigator wx:for="{{newBookList}}" wx:key="k"
+      class="content-item" url="../book/detail?currentType=1&isbn={{item.isbn}}&title={{item.title}}&ztNum={{item.zt_num}}">
+        <image mode="aspectFit" class="bookImg" src="{{item.book_img}}" style="width:115px;height:120px;"></image>
+        <view class="title">
+          <text>{{item.title}}</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="newbooks">
+    <view class="header">
+      <button type="default" bindtap="toRecommendBookIndex">
+        <text>本月推荐</text>
+      </button>
+    </view>
+     <view class="content">
+      <navigator wx:for="{{recommendBookList}}" wx:key="k"
+      class="content-item" url="../book/detail?currentType=2&isbn={{item.isbn}}&title={{item.title}}&ztNum={{item.zt_num}}">
+        <image mode="aspectFit" class="bookImg" src="{{item.book_img}}" style="width:115px;height:120px;"></image>
+        <view class="title">
+          <text>{{item.title}}</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="bottom-show">
+    <text>Shandong University SmartLibrary</text>
+  </view>
+</view>

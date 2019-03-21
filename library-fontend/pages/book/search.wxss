@@ -1,0 +1,120 @@
+.search {
+  width: 100%;
+  background-color: #00c953;
+  height: 50px;
+  /* line-height: 50px;
+  position: fixed;
+  z-index: 999; */
+}
+
+.searchInput {
+  width: 82%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+}
+
+.searchInput image {
+  margin-left: 20rpx;
+}
+
+.searchContent {
+  font-size: 15px;
+  color: #777;
+  margin-left: 10rpx;
+}
+
+.btn {
+  position: absolute;
+  right: 10px;
+}
+
+.btn button {
+  width: 60px;
+  height: px;
+  font-size: 15px;
+  background: none !important;
+  color: #fff !important;
+  border: none;
+  text-align: center;
+}
+
+button::after {
+  border: none;
+}
+
+.type {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 999;
+  background: #f2f2f2;
+  top: 50px;
+}
+
+.type view {
+  margin: 0 auto;
+}
+
+.select {
+  font-size: 16px;
+  font-weight: bold;
+  width: 25%;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 5rpx solid #00c953;
+  color: #00c953;
+}
+
+.default {
+  width: 25%;
+  font-size: 16px;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+}
+
+.list {
+  margin-top: 100rpx;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.pic image {
+  width: 80px;
+  height: 100px;
+  padding: 10px;
+}
+
+.base-info {
+  font-size: 12px;
+  padding-top: 10px;
+  line-height: 20px;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: bold;
+  color: #000;
+}
+
+.desc {
+  color: #333;
+}
+
+.hr {
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+  opacity: 0.2;
+}

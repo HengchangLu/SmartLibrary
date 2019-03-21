@@ -1,0 +1,64 @@
+<view class="content">
+  <view class="search">
+    <form bindsubmit="searchContentSubmit" class="center">
+      <view class="searchInput">
+        <image src="/pages/images/fdj.jpg" style="width:18px;height:16px;"></image>
+        <input class="searchContent" name="searchContent" value="{{searchContent}}" placeholder='搜索你感兴趣的书目'></input>
+        <view class="btn">
+          <button type="default" formType="submit">搜索</button>
+        </view>
+      </view>
+    </form>
+  </view>
+  <!-- <form bindsubmit="searchSubmit" action="">
+    <view class="search">
+      <view class="searchInput">
+        <image src="pages/images/fdj.jpg" style="width:36rpx;height:32rpx"></image>
+        <input type="text" class="searchContent" placeholder='搜索你感兴趣的书目' value="{{searchContent}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+  </form> -->
+  <view class="hr"></view>
+  <view>
+    <view class="list">
+      <navigator wx:for="{{searchResult}}" wx:key="k" url="../bookdetail/bookdetail?ISBN={{item.ISBN}}&author={{item.author}}&bookUrl={{item.book_url}}&dbScore={{item.db_score}}&dbSummary={{item.db_summary}}&label={{item.label}}&name={{item.name}}&posPr={{item.pos_pr}}&press={{item.press}}&ztNum={{item.zt_num}}">
+        <view class="book">
+          <view class="pic">
+            <image src="{{item.book_url}}" mode="aspectFit" style="width:115px;height:120px;"></image>
+          </view>
+          <view class="movie-info">
+            <view class="base-info">
+              <view class="name">{{item.name}}</view>
+              <view class="desc">作者: {{item.author}}</view>
+              <view class="desc">出版社：{{item.press}}</view>
+              <view class="desc">中图分类号：{{item.zt_num}}</view>
+              <view class="desc">
+                豆瓣评分：
+                <image wx:if="{{item.db_score>=0.5 && item.db_score< 1.5}}" src="/pages/images/star-half.png" style="width:12px;height:12px;"></image>
+                <image wx:if="{{item.db_score >= 1.5}}" src="/pages/images/star.jpg" style="width:12px;height:12px;"></image>
+                <image wx:if="{{item.db_score>=2.5 && item.db_score< 3.5}}" src="/pages/images/star-half.png" style="width:12px;height:12px;"></image>
+                <image wx:if="{{item.db_score >= 3.5 }}" src="/pages/images/star.jpg" style="width:12px;height:12px;"></image>
+                <image wx:if="{{item.db_score>=4.5 && item.db_score< 5.5}}" src="/pages/images/star-half.png" style="width:12px;height:12px;"></image>
+                <image wx:if="{{item.db_score >= 5.5 }}" src="/pages/images/star.jpg" style="width:12px;height:12px;"></image>
+                <image wx:if="{{item.db_score>=6.5 && item.db_score< 7.5}}" src="/pages/images/star-half.png" style="width:12px;height:12px;"></image>
+                <image wx:if="{{item.db_score >= 7.5 }}" src="/pages/images/star.jpg" style="width:12px;height:12px;"></image>
+                <image wx:if="{{item.db_score>= 8.5 && item.db_score< 9.5}}" src="/pages/images/star-half.png" style="width:12px;height:12px;"></image>
+                <image wx:if="{{item.db_score >= 9.5}}" src="/pages/images/star.jpg" style="width:12px;height:12px;"></image>
+                {{item.db_score}}分
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+      <view class="hr"></view>
+    </view>
+  </view>
+</view>

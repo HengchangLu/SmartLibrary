@@ -1,0 +1,59 @@
+/* pages/friendlylink/friendlylink.wxss */
+/* .btn-area{
+  margin-top: 10px;
+  width:100%;
+}
+.btn{
+  background:#f2f2f2!important;
+  width: 60%;
+  height: 66rpx;
+  line-height: 66rpx;
+  text-align: center;
+  display: table;
+}
+.btn text{
+  vertical-align: middle;
+  display: table-cell;
+  font-size: 24rpx;
+} */
+page{
+  /* background-color: #E8E8E8; */
+  background-color: #E8E8E8;
+}
+.instruction{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.instruction text{
+  font-size: 26rpx;
+  font-weight: bolder;
+  color: red;
+}
+.item{
+  width: 90%;
+  height: 105rpx;
+  margin: 0 auto;
+  margin-top:20rpx;
+}
+.title{
+  background-color:#ffffff;
+  padding:5px;
+  height: 40rpx;
+  border-radius: 20rpx 20rpx 0rpx 0rpx; 
+}
+.title text{
+  font-size: 30rpx;
+  text-align: center;
+  margin-left: 10rpx;
+}
+.url{
+  background-color:#ffffff;
+  height: 45rpx;
+  line-height: 45rpx;
+  border-radius:0rpx 0rpx 20rpx 20rpx; 
+}
+.url text{
+  font-size: 24rpx;
+  text-align: center;
+  margin-left: 20rpx;
+}

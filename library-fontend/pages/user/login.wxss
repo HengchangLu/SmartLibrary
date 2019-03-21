@@ -1,0 +1,63 @@
+page{
+  background-color: #00c953;
+}
+.userinfo{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  padding: 100rpx 0rpx;
+  align-items: center;
+  background: #00c953;
+}
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: black;
+}
+.input-area{
+  /* margin-top: 100rpx; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loginInput{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  width:55%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  height: 68rpx;
+  line-height: 68rpx;
+  border-radius: 30rpx;
+}
+.loginInput image{
+  position: absolute;
+  margin-left:30rpx;
+}
+.loginInput input{
+  font-size: 35rpx;
+  color: #777;
+  margin-left: 80rpx;
+}
+.btn-area {
+  width: 100%;
+
+}
+.loginBtn{
+  width: 38%;
+  height: 85rpx;
+  line-height: 85rpx;
+  margin-top: 60rpx;
+  border-radius: 40rpx;
+  display: table;
+  align-items: center;
+}
+.loginBtn text{
+  vertical-align: middle;
+  display: table-cell;
+}

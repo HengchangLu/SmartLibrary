@@ -1,0 +1,214 @@
+/**index.wxss**/
+
+page {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0rpx;
+  justify-content: flex-start;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #00c953;
+  height: 90rpx;
+  line-height: 90rpx;
+  position: fixed;
+  z-index: 999;
+  justify-content: space-between;
+}
+
+.searchInput {
+  width: 95%;
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+}
+
+.searchInput image {
+  margin-left: 20rpx;
+}
+
+.searchInput text {
+  font-size: 30rpx;
+  color: #777;
+  font-family: "微软雅黑";
+  margin-left: 10rpx;
+}
+
+.swiper {
+  /* height: calc(100% - 90rpx); */
+  width: 100%;
+  margin-top: 90rpx;
+  height: 430rpx;
+}
+
+.swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.item {
+  margin-top: 0rpx;
+  text-align: center;
+  font-size: 15px;
+  width: 25%;
+  display: inline-block;
+  margin-bottom: 14rpx;
+}
+
+.item text {
+  font-size: 17px;
+}
+
+.default {
+  width: 33%;
+  font-size: 15px;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  display: inline-block;
+}
+
+.select {
+  font-size: 15px;
+  width: 33%;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  display: inline-block;
+  color: #00c957;
+  border-color: 5rpx solid #00c957;
+}
+
+.news-item {
+  border: 1px solid #00c957;
+  width: 90%;
+  height: 140rpx;
+  margin: 0 auto;
+  border-radius: 18rpx 18rpx 0rpx 0rpx;
+  margin-top: 20rpx;
+}
+
+.btn {
+  /* margin-left: 5px; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.header button {
+  width: 700rpx;
+  height: 80rpx;
+  font-size: 14.5rpx;
+  background: #f2f2f2 !important;
+  color: #00c957 !important;
+  border-radius: 30rpx;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.btn button text {
+  margin-left: 10rpx;
+  vertical-align: middle;
+  display: table-cell;
+  font-size: 32rpx;
+}
+
+button::after {
+  border: none;
+}
+
+/* .btn-area {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.btn {
+  background: #f2f2f2 !important;
+  width: 90%;
+  height: 66rpx;
+  line-height: 66rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  display: table;
+}
+
+.btn text {
+  vertical-align: middle;
+  display: table-cell;
+  font-size: 24rpx;
+}*/
+
+.bottom-show text {
+  font-size: 24rpx;
+}
+
+.newbooks {
+  margin: 15px 5px 15px;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 0px 0px 5px;
+}
+
+.header button text {
+  font-size: 20px;
+  margin-left: -250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookImg {
+  width: 100%;
+  height: 130px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+}
+
+.content-item {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  height: 150px;
+  margin: 5px 0px 5px;
+}
+
+.content-item image {
+  height: 120px;
+}
+
+.title {
+  height: 30px;
+}
+
+.title text {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

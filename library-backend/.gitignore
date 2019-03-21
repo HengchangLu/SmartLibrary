@@ -1,0 +1,10 @@
+/media/
+/static/
+/.idea/
+/log/
+/venv/
+*/migrations/*
+!*/migrations/__init__.py
+*.pyc
+*.bat
+*.pem

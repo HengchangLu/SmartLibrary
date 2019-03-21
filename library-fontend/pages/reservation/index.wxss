@@ -1,0 +1,4 @@
+.selectLibrary button{
+  width: 90%;
+  margin-top: 30rpx;
+}

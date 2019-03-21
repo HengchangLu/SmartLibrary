@@ -1,0 +1,71 @@
+page {
+  background-color: #6959cd;
+}
+
+.head text {
+  font-size: 30rpx;
+  color: white;
+}
+
+.item {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+
+.name {
+  background-color: #ffffff;
+  padding: 5px;
+  height: 40rpx;
+  border-radius: 20rpx 20rpx 0rpx 0rpx;
+}
+
+.name text {
+  font-size: 20px;
+  width: 100%;
+  margin-left: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.others {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 0rpx 0rpx 20rpx 20rpx;
+}
+
+.content {
+  line-height: 35rpx;
+}
+
+.content text {
+  font-size: 30rpx;
+  text-align: center;
+  margin-left: 20rpx;
+}
+
+.renewBtn {
+  position: absolute;
+  right: 0rpx;
+}
+
+.renewBtn button {
+  width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  margin-right: 80rpx;
+  margin-top: 85rpx;
+  background: none !important;
+  color: #6959cd !important;
+  text-align: center;
+  border-radius: 20rpx;
+}
+
+.renewBtn button::after {
+  border: none;
+}

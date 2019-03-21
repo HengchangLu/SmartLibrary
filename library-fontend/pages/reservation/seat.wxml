@@ -1,0 +1,147 @@
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{activeIndex==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+
+<!-- 座位预约 -->
+
+<view class="seat" wx:if="{{!activeIndex}}">
+  <view class="time">
+    <text class="title">时间\n</text>
+    <view class="selectTime">
+      <button class="{{selectDate == 0 ?'btn1':'btn'}}" data-id="0" size="default" bindtap="selectTime">今天</button>
+      <button class="{{selectDate == 1 ?'btn1':'btn'}}" data-id="1" size="default" bindtap="selectTime">明天</button>
+    </view>
+  </view>
+  <view class="location" wx:for="{{displayList}}" wx:for-item="item" wx:for-index="index" wx:key="k">
+    <view class="floor">
+      <text class="title">{{item.floor}}</text>
+    </view>
+    <view class="region">
+      <button class="{{currentTag1 == index*10+index1 ?'btn2':'btn3'}}" wx:for="{{item.region}}" wx:for-index="index1" wx:for-item="region" data-id="{{index1+10*index}}" bindtap="selectRegion" style="margin-left:20rpx;width:{{item.length*35}}rpx;" wx:key="k">
+        <view>{{region.name}}</view>
+      </button>
+    </view>
+  </view>
+  <view class="seatImg" wx:if="{{seatImg}}">
+    <text class="title">座位分布图，点击可放大查看</text>
+    <image bindtap="previewImg" src="{{seatImg}}"></image>
+  </view>
+  <view class="seat">
+    <view>
+      <text class="title">选择座位</text>
+    </view>
+    <view class="selectSeat">
+      <picker bindchange="pickerSeat" value="{{seatIndex}}" range="{{spaceSeat}}">
+        <view class="picker">
+          <text>当前选择：{{spaceSeat[seatIndex]}}</text>
+        </view>
+      </picker>
+      <button bindtap="reserveSeat" class="btn" size="default">确定</button>
+    </view>
+  </view>
+
+</view>
+
+<!-- 研讨室预约 -->
+
+<view class="rooms" wx:if="{{activeIndex}}">
+
+  <form bindsubmit="formSubmit">
+    <view class="category">
+      <view class="label">
+        <text>研讨室</text>
+      </view>
+      <view class="input">
+        <!-- <picker mode="selector" range="{{roomRange}}" bindchange="bindRoomChange">
+          <view>{{roomRange[room]}}</view>
+        </picker> -->
+        <view bindtap="selectRoom">{{room}}</view>
+      </view>
+    </view>
+    <view class="line"></view>
+
+    <view class="category">
+      <view class="label">
+        <text>预约日期</text>
+      </view>
+      <view class="input">
+        <picker mode="date" start="{{start}}" end="{{end}}" bindchange="bindDateChange">
+          {{selectedRoomDate}}
+        </picker>
+      </view>
+    </view>
+    <view class="line"></view>
+
+    <view class="title1">
+      <text>选择时间</text>
+    </view>
+    <view class='sliderHCon'>
+      <view class='showTime'>
+        <text class='timeValue'>{{leftValue}}</text>
+        <text class='timeValue'>{{rightValue}}</text>
+      </view>
+      <view class='twoSlider'>
+        <slider min='{{leftMin}}' max='{{leftMax}}' value='{{leftValue}}' activeColor='#cecacb' backgroundColor='#f26a36' block-size='20' step='5' style='width:{{leftWidth}}%;margin-right:0rpx;' bindchange="leftChange" />
+        <slider min='{{rightMin}}' max='{{rightMax}}' value='{{rightValue}}' activeColor='#f26a36' backgroundColor='#cecacb' block-size='20' step='5' style='width:{{rightWidth}}%;margin-left:0rpx;' bindchange="rightChange" />
+      </view>
+    </view>
+    <view class="category">
+      <view class="label">
+        <text>联系方式</text>
+      </view>
+      <view class="input">
+        <input name="tel" placeholder="请输入联系方式" placeholder-style="color:#999999;font-size:16px;" />
+      </view>
+    </view>
+    <view class="line"></view>
+
+    <view class="category">
+      <view class="label">
+        <text>讨论主题</text>
+      </view>
+      <view class="input">
+        <input name="theme" placeholder="请输入讨论主题" placeholder-style="color:#999999;font-size:16px;" />
+      </view>
+    </view>
+    <view class="line"></view>
+    <view class="category">
+      <view class="label">
+        <text>讨论内容</text>
+      </view>
+      <view class="input">
+        <textarea name="content" class="textarea" placeholder="请输入讨论内容\n讨论内容文字请大于10字" style="height:3.3em;" placeholder-style="color:#999999;font-size:16px;"></textarea>
+      </view>
+    </view>
+    <view class="line"></view>
+
+    <view class="category">
+      <view class="label">
+        <text>是否公开</text>
+      </view>
+      <switch class="tui-fr" checked="{{isChecked}}" bindchange="listenerSwitch" />
+    </view>
+    <view class="line"></view>
+
+    <view class="category">
+      <view class="label">
+        <text>添加成员</text>
+      </view>
+      <view class="input1">
+        <input name="member" placeholder="请输入学工号" placeholder-style="color:#999999;font-size:16px;" bindblur="checkValue" />
+      </view>
+      <view class="btn4">
+        <button bindtap="addMember">添加</button>
+      </view>
+    </view>
+    <view class="line"></view>
+    <view>
+      <button class="submitBtn" formType="submit">提交申请</button>
+    </view>
+    <!-- <view class="title1">
+      <text>附件上传</text>
+    </view>
+    <button style="margin:30rpx;" bindtap="chooseimage">获取图片</button>
+    <image src="{{tempFilePaths }}" catchTap="chooseImageTap" mode="aspectFit" style="width: 100%; height: 450rpx" /> -->
+  </form>
+</view>
+<view class="pageBottom"></view>

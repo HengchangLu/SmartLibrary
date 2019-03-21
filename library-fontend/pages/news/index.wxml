@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="nav" style="margin-top:40rpx; width: 100%; margin-bottom:20rpx;">
+    <view class="item" bindtap="toLibSummaryIndex">
+      <view>
+        <image src="../images/survey.png" style="width:33px;height:30px;"></image>
+      </view>
+      <view>图书馆概况</view>
+    </view>
+    <view class="item" bindtap="toClassificationIndex">
+      <view>
+        <image src="../images/find1.png" style="width:33px;height:30px;"></image>
+      </view>
+      <view>图书分类</view>
+    </view>
+    <view class="item" bindtap="toServiceIndex">
+      <view>
+        <image src="../images/communication.png" style="width:33px;height:30px;"></image>
+      </view>
+      <view>服务与交流</view>
+    </view>
+    <view class="item" bindtap="toFriendLinkIndex">
+      <view>
+        <image src="../images/link.png" style="width:30px;height:30px;"></image>
+      </view>
+      <view>友情链接</view>
+    </view>
+  </view>
+  <view class="newsMenu">
+    <view class="{{currentTab==1?'select':'default'}}" data-current="1" bindtap="switchNav">公告消息</view>
+    <view class="{{currentTab==2?'select':'default'}}" data-current="2" bindtap="switchNav">资源动态</view>
+    <view class="{{currentTab==3?'select':'default'}}" data-current="3" bindtap="switchNav">讲座信息</view>
+  </view>
+  <scroll-view scroll-y bindscrolltolower="loadMoreNews" style="margin-top: 30rpx;">
+    <block wx:for="{{newsList}}" wx:key="key">
+      <navigator class="news-item" url="../news/detail?title={{item.title}}&time={{item.time}}&id={{item.id}}&currentTab={{currentTab}}">
+        <view class="newsTop">
+          <view class="newsTitle">{{item.title}}</view>
+        </view>
+        <view class="newsBottom">
+          <view class="newsTime">{{item.time}}</view>
+        </view>
+      </navigator>
+    </block>
+  </scroll-view>
+</view>

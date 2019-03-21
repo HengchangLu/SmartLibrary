@@ -1,0 +1,58 @@
+<view class="content">
+  <view class="bg">
+    <view class="head">
+      <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+      <view class="login">
+        <view class="student-name">
+          <text >{{name}}</text>
+        </view>
+        <view class="account">
+          <text >{{account}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="item" bindtap="toMyBorrow">
+    <view class="img">
+      <image src="../images/service.jpg" style="width:40rpx;height:48rpx"></image>
+    </view>
+    <view class="name">我的借阅</view>
+    <view class="detail">
+      <text></text>
+    </view>
+  </view>
+  <view class="line1"></view>
+  <view class="item" bindtap="toFeedback">
+    <view class="img">
+      <image src="../images/service.jpg" style="width:40rpx;height:48rpx"></image>
+    </view>
+    <view class="name">我要反馈</view>
+    <view class="detail">
+      <text></text>
+    </view>
+  </view>
+
+  <view class="line1"></view>
+  <view class="item" bindtap="toMap">
+    <view class="img">
+      <image src="../images/service.jpg" style="width:40rpx;height:48rpx"></image>
+    </view>
+    <view class="name">地图</view>
+    <view class="detail">
+      <text></text>
+    </view>
+  </view>
+
+  <view class="line"></view>
+  <view class="item" bindtap='toLoginPage'>
+    <view class="img">
+      <image src="../images/me-0.jpg" style="width:40rpx;height:48rpx"></image>
+    </view>
+    <view class="name">退出登录</view>
+    <view class="detail">
+      <text></text>
+    </view>
+  </view>
+  <view class="line1"></view>
+</view>

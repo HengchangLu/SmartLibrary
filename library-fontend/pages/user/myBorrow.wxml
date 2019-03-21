@@ -1,0 +1,21 @@
+<view class="head">
+  <text>目前借书：{{myBorrowList.length}}</text>
+</view>
+<view class="borrowList" wx:for="{{myBorrowList}}" wx:key="item">
+  <view class="item">
+    <view class="name">
+      <text>{{item.name}}</text>
+    </view>
+    <view class="others">
+      <view class="content">
+        <text>条码号：{{item.code}}\n</text>
+        <text>借阅日期：{{item.borrowTime}}\n</text>
+        <text>应还日期：{{item.returnTime}}\n</text>
+        <text>馆藏地：{{item.location}}\n</text>
+      </view>
+      <view class="renewBtn">
+        <button bindtap="renew" type="default" class="button-hover" data-code="{{item.code}}"data-check="{{item.check}}">续借</button>
+      </view>
+    </view>
+  </view>
+</view>

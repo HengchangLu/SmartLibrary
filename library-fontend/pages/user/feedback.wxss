@@ -1,0 +1,15 @@
+page {
+  background-color:#CDC9C9;
+}
+.textarea{
+  margin-top: 20px;
+  background-color: #ffffff;
+  width: 100%;
+  font-size: 36rpx;
+  height: 120px;
+}
+.btn{
+  margin-top: 60px;
+  width: 80%;
+  border-radius: 40rpx;
+}

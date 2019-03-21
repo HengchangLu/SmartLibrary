@@ -1,0 +1,70 @@
+.button {
+  width: 350rpx;
+  height: 70rpx;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 100rpx;
+  margin-bottom: 20rpx;
+}
+
+.button text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.pic {
+  width: 40%;
+}
+
+.pic image {
+  width: 80px;
+  height: 100px;
+  padding: 10px;
+}
+
+.book-info {
+  width: 60%;
+  font-size: 12px;
+  padding-top: 10px;
+  line-height: 20px;
+}
+
+.name text {
+  display: block;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #000;
+  /* text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; */
+}
+
+.desc {
+  color: #333;
+  font-size: 30rpx;
+}
+
+.desc text {
+  display: -webkit-box;
+  color: #333;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button-area {
+  display: flex;
+  flex-direction: row;
+}
